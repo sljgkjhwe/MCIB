@@ -4,7 +4,7 @@ This repository hosts the official code for the paper **"Achieving Efficient Mul
 
 ## Overview
 
-The MCIB model is designed to efficiently fuse multimodal features for sarcasm detection by leveraging the Conditional Information Bottleneck (CIB) framework. The architecture employs three parallel CIB structures to filter out irrelevant information and extract relevant features between each pair of modalities.
+The MCIB model is designed to efficiently fuse multimodal features for sarcasm detection by leveraging the Conditional Information Bottleneck (CIB) framework.
 
 ![MCIB Architecture](figmain.png)  
 *Figure 1: The diagram illustrates the overall architecture of the MCIB model. The multimodal fusion component employs three parallel conditional information bottleneck structures to filter out irrelevant information and extract relevant information between each pair of modalities. For each pair of modalities, we first minimize the mutual information between the primary modality and the latent state to achieve filtering and compression through the information bottleneck. We then maximize the conditional mutual information among the auxiliary modality, latent state, and prediction target. Finally, the bidirectional optimization within CIB produces an intermediate representation \( b \) that encapsulates the essential information required for our prediction target.*
